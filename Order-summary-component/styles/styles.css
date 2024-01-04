@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     list-style: none;
     text-decoration: none;
 }
@@ -22,11 +22,12 @@
 
 
 body {
-    font-family: 'Red Hat Display', sans-serif;
-    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;    
     background-image: url(../images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-position: top;
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;      
 }
 
 main {
@@ -54,13 +55,12 @@ h5 {
 
 /* PLAN SECTION  */
 .plan {
-    background-color: var(--very-pale-blue);    
+    background-color: var(--very-pale-blue); 
+    border-radius: 0 10px 10px 0;    
 }
 .plan ul {
     display: flex;    
     padding: 10px;
-    border-radius: 0 10px 10px 0;   
-
 }
 .plan ul li {
     flex-direction: column;
@@ -69,16 +69,22 @@ h5 {
     padding-left: 30px;
     color: var(--dark-blue);
     font-weight: 700;
+    
 }
 .plan ul li p {
     color: var(--desaturated-blue);
+    line-height: 1.5;
 }
 .plan ul li a {
     color: #4942E4;
-    margin-left: 40px;
-    margin-top: 10px;
+    margin-left: 40px;    
+    font-weight: 700;    
 }
 
+.plan ul li a:hover {
+    text-decoration: none;
+    opacity: .8;
+}
 
 /* BUTTON SECTION */
 .btn {
@@ -89,6 +95,7 @@ h5 {
 .btn:hover {
     background-color: #4942E4;
     color: white;
+    opacity: .8;
 }
 
 .cancel {
@@ -101,14 +108,28 @@ h5 {
     color: var(--desaturated-blue);
     font-weight: 700;
 }
-
+.cancel a:hover {
+    opacity: .8;
+}
 
 /* FOOTER */
 .attribution {
       font-size: 11px;
       text-align: center;
+      padding: 20px;
     }
 
 .attribution a {
       color: hsl(228, 45%, 44%);
 }
+
+
+@media screen and (min-width: 375px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
