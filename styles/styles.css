@@ -1,0 +1,134 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* CSS VARIABLES */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /* background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 15px;
+}
+
+
+h1, p {
+    text-align: left;
+    padding: 3%;
+}
+h1{
+    color: var(--very-light-gray);
+    margin-top: 30px;   
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+    color: var(--transparent-white);
+    margin-top: 30px;
+}
+
+/* COLUMNS */
+.col {
+    width: 280px;
+    height: 450px;
+}
+
+.sedan {
+    background: var(--bright-orange);
+    border-radius: 7px 0 0 7px;
+}
+
+.suv {
+    background: var(--dark-cyan);
+}
+ .luxury {
+    background: var(--very-dark-cyan);
+    border-radius: 0 7px 7px 0;
+}
+
+.icon {
+    margin-top: 30px;
+    margin-left: 0;
+    text-align: left;
+}
+
+
+ /* BUTTONS */
+.btn {    
+    cursor: pointer;
+    background: var(--very-light-gray);
+    border-radius: 15px;
+    margin-top: 50px;    
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.btn:hover {
+    background-color: initial;
+    color: var(--very-light-gray);   
+}
+
+.sedan-btn {
+    color: var(--bright-orange);
+}
+
+.suv-btn {
+    color: var(--dark-cyan);
+}
+
+.luxury-btn {
+    color: var(--very-dark-cyan);
+}
+
+.cars {
+    padding-left: 5%;
+}
+
+
+/* Adjustments for mobile devices */
+
+@media only screen and (max-width: 625px) {      
+      .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center columns horizontally */       
+      }
+
+      .col {
+        width: 50%;      
+        
+      }
+      .main-container {
+        align-items: center;
+        margin: auto;
+        padding: 3%;        
+      }
+      .btn {
+        margin-bottom: 10px;
+      }
+      .sedan {
+        border-radius: 7px 7px 0 0;
+      }
+      .luxury {
+        border-radius: 0 0 7px 7px;
+      }
+}
