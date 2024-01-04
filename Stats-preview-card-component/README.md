@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/terryyufei/frontend_mentor_Stats-preview-card-component)
-- Live Site URL: [Live site ](https://terryyufei.github.io/frontend_mentor_Stats-preview-card-component/)
+- Solution URL: [Solution](https://github.com/terryyufei/frontend_mentor/tree/main/Stats-preview-card-component)
+- Live Site URL: [Live site ](https://frontend-mentor-stats-preview-eight.vercel.app/)
 
 
 ### Built with

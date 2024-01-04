@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/terryyufei/frontend_mentor-3-column-preview-card-component)
-- Live Site URL: [Live site](https://terryyufei.github.io/frontend_mentor-3-column-preview-card-component/)
+- Solution URL: [Solution](https://github.com/terryyufei/frontend_mentor/tree/main/3-column-preview-card-component)
+- Live Site URL: [Live site](https://frontend-mentor-iota-murex.vercel.app/)
 
 ## My process
 
