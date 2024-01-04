@@ -1,63 +1,134 @@
-/* reset css */
+/* Reset CSS */
 * {
+    margin: 0;
     padding: 0;
-    margin: 0;   
-    font-family: "Outfit", serif;
-    list-style-type: none;
+    box-sizing: border-box;
+    list-style: none;
     text-decoration: none;
-} 
-
-:root {
-    --White: hsl(0, 0%, 100%);
-    --Light-gray: hsl(212, 45%, 89%);
-    --Grayish-blue: hsl(219, 40%, 59%);
-    --Dark-blue: hsl(218, 44%, 22%);
 }
+
+
+/* CSS VARIABLES */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /* background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
 
 body {
-    background:var(--Grayish-blue);
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    font-size: 15px;
 }
 
-.container {
-    background-color: var(--White);
-    border-radius: 15px;
-    box-shadow: 0 10px 40px hsl(220, 15%, 55%);
-    padding: 12px;
-    top: 25%;
-    text-align: center;
-    width: 375px;     
-}
 
-img {
-  border-radius: 15px;
-  height: 375px;
-  width: 375px;
+h1, p {
+    text-align: left;
+    padding: 3%;
 }
-
-h1 {
-  color: var(--Dark-blue);  
-  font-weight: 700;
+h1{
+    color: var(--very-light-gray);
+    margin-top: 30px;   
+    font-family: 'Big Shoulders Display', cursive;
 }
 
 p {
-  color: var(--Grayish-blue);
-  font-size: 15px;
-  font-weight: 400;
-  padding: 15px;
+    color: var(--transparent-white);
+    margin-top: 30px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+/* COLUMNS */
+.col {
+    width: 280px;
+    height: 450px;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);  
+.sedan {
+    background: var(--bright-orange);
+    border-radius: 7px 0 0 7px;
+}
+
+.suv {
+    background: var(--dark-cyan);
+}
+ .luxury {
+    background: var(--very-dark-cyan);
+    border-radius: 0 7px 7px 0;
+}
+
+.icon {
+    margin-top: 30px;
+    margin-left: 0;
+    text-align: left;
+}
+
+
+ /* BUTTONS */
+.btn {    
+    cursor: pointer;
+    background: var(--very-light-gray);
+    border-radius: 15px;
+    margin-top: 50px;    
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.btn:hover {
+    background-color: initial;
+    color: var(--very-light-gray);   
+}
+
+.sedan-btn {
+    color: var(--bright-orange);
+}
+
+.suv-btn {
+    color: var(--dark-cyan);
+}
+
+.luxury-btn {
+    color: var(--very-dark-cyan);
+}
+
+.cars {
+    padding-left: 5%;
+}
+
+
+/* Adjustments for mobile devices */
+
+@media only screen and (max-width: 625px) {      
+      .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center columns horizontally */       
+      }
+
+      .col {
+        width: 50%;      
+        
+      }
+      .main-container {
+        align-items: center;
+        margin: auto;
+        padding: 3%;        
+      }
+      .btn {
+        margin-bottom: 10px;
+      }
+      .sedan {
+        border-radius: 7px 7px 0 0;
+      }
+      .luxury {
+        border-radius: 0 0 7px 7px;
+      }
 }
