@@ -27,7 +27,11 @@ body {
     background-color: var(--pale-blue);
     background-position: top;
     background-size: cover;
-    background-repeat: no-repeat;      
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+       
 }
 
 main {
@@ -124,11 +128,12 @@ h5 {
 }
 
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
     body {
         background-image: url(../images/pattern-background-mobile.svg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
     }
 }
 
